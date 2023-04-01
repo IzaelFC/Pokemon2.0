@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts.js"></script>
+    <style>
+        /*Scrollbar*/
+        ::-webkit-scrollbar {
+            width: 5px;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: orange;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(197, 128, 0);
+        }
+    </style>
+    <title>Pokedex</title>
+</head>
+<body class="bg-slate-900 flex-auto" >
+    <div class="bg-black flex flex-col items-center place-content-center py-5 gap-y-3">
+        <h1 class="text-xl text-orange-500">Digite o número do pokémon</h1>
+        <input id="pokemon" type="text" class="bg-gray-600 text-teal-300 outline-none rounded-sm focus:bg-gray-700 pl-1">
+        <button type="button" onclick="pokemon(tipos)" class="bg-slate-900 px-5 text-xs text-slate-300 outline-none">Pesquisar</button>
+    </div>
+
+    <div class="flex ml-10 mr-10 my-7">
+        <div class="bg-slate-800 w-screen h-[70vh] rounded-l-xl">
+            <div class="flex flex-col ml-5 mr-5 justify-center items-center">
+                <h1 id="nome" class="text-orange-500 mt-3">DITTO</h1>
+                <img id="foto" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png" alt="" class="m-auto w-[20vh] mt-5 mb-5">
+                <h1 class="text-orange-500">Habilidade(s)</h1>
+                <div class="flex flex-col justify-center items-center gap-y-5">
+                    <h2 id="habilidade" class="text-teal-500 mt-5"></h2>
+                    <p id="descricao" class="text-center text-white overflow-y-auto max-h-[19vh]"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-700 w-screen h-[70vh] rounded-r-xl">
+            <div id="tipos" class="w-8 h-8 flex flex-col items-center justify-center -ml-4 mt-16 gap-y-5"></div>
+            <div id="golpes" class="text-teal-500 flex flex-col -mt-20 ml-5 overflow-y-auto max-h-[65vh]"></div>
+        </div>
+    </div>
+</body>
+</html>
