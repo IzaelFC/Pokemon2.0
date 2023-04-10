@@ -79,6 +79,6 @@ async function moves(pokemon){
     }
 
     for (var item = 0; item < movelist.length; item++){
-        listaMove.innerHTML += `<li class="list-none text-sm">${movelist[item][0].toUpperCase() + movelist[item].substring(1).replace('-', ' ')}</li>`
+        listaMove.innerHTML += `<li class="list-none text-sm flex place-content-center bg-white/5">${movelist[item][0].toUpperCase() + movelist[item].substring(1).replace('-', ' ')}</li>`
     }
 }
